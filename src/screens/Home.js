@@ -3,9 +3,11 @@ import React from 'react'
 
 import Button from 'components/Button'
 
+import './Home.scss'
+
 const Home = () => (
-  <div className="App">
-    <h1>This is where home displayed</h1>
+  <div className="Home">
+    <h1>Home</h1>
     <Button>Hello World</Button>
   </div>
 )
