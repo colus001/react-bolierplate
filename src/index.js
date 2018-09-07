@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap-reboot.css'
 
 ReactDOM.render(
   <Root />,
-  document.getElementById('root')
+  (document.getElementById('root'): any)
 )
 
 registerServiceWorker()
