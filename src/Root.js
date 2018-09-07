@@ -1,26 +1,24 @@
 // @flow
 import React, { Component } from 'react'
-import { Provider } from 'react-redux'
-import { Router as BrowserRouter } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
+
+import Navigation from 'components/Navigation'
 
 import Home from 'screens/Home'
-
-import configureStore from 'state/configureStore'
-
-import history from './history'
-
-const store = configureStore()
+import User from 'screens/User'
 
 type Props = {}
 
 class Root extends Component<Props> {
   render() {
     return (
-      <Provider store={store}>
-        <BrowserRouter history={history}>
-          <Home />
-        </BrowserRouter>
-      </Provider>
+      <div>
+        <Navigation />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/user" component={User} />
+        </Switch>
+      </div>
     )
   }
 }
