@@ -6,11 +6,10 @@ import { Router as BrowserRouter } from 'react-router-dom'
 import Home from 'screens/Home'
 
 import configureStore from 'state/configureStore'
-import rootReducer from 'state/reducers'
 
 import history from './history'
 
-const store = configureStore(rootReducer)
+const store = configureStore()
 
 type Props = {}
 
