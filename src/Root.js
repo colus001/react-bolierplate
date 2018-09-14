@@ -1,5 +1,5 @@
 // @flow
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Switch, Route } from 'react-router-dom'
 
 import Navigation from 'components/Navigation'
@@ -12,13 +12,13 @@ type Props = {}
 class Root extends Component<Props> {
   render() {
     return (
-      <div>
+      <Fragment>
         <Navigation />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/user" component={User} />
         </Switch>
-      </div>
+      </Fragment>
     )
   }
 }
