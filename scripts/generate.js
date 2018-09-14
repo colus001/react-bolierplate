@@ -74,7 +74,11 @@ const generate = () => {
   const type = process.argv[2]
   const name = process.argv[3]
   const reactClass = process.argv[4]
-  if (!type || !name) return process.exit(1)
+  if (!type || !name) {
+    console.info('Usage: npm run gen [type] [name]')
+    process.exit()
+    return
+  }
 
   let filePath = `src/${type}s/${name}.js`
   const isExist = fs.existsSync(filePath)
