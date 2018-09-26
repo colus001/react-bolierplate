@@ -3,7 +3,7 @@
 [include]
 
 [libs]
-./flow-types/
+flow-types/
 
 [lints]
 
@@ -16,6 +16,8 @@ module.name_mapper='^constants' -> '<PROJECT_ROOT>/src/state'
 module.name_mapper='^state' -> '<PROJECT_ROOT>/src/state'
 module.name_mapper='^styles' -> '<PROJECT_ROOT>/src/styles'
 
+module.file_ext=.js
+module.file_ext=.jsx
 module.file_ext=.css
 module.file_ext=.scss
 
