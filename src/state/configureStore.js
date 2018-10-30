@@ -1,19 +1,20 @@
 import { createStore, applyMiddleware } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
 
-import rootEpic from 'state/epics'
+// import rootEpic from 'state/epics'
 import rootReducer from 'state/reducers'
 
 const epicMiddleware = createEpicMiddleware()
 
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+
 const configureStore = () => {
   const store = createStore(
     rootReducer,
-    applyMiddleware(epicMiddleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+    composeEnhancers(applyMiddleware(epicMiddleware)),
   )
 
-  epicMiddleware.run(rootEpic)
+  // epicMiddleware.run(rootEpic)
 
   return store
 }
