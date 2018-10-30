@@ -1,11 +1,17 @@
 {
   "extends": [
-    "react-app",
+    "plugin:react/recommended",
     "plugin:flowtype/recommended"
   ],
   "rules": {
     "semi": [2, "never"],
     "no-extra-semi": "warn",
     "react/no-unused-prop-types": "error"
+  },
+  "settings": {
+    "react": {
+      "version": "16.0",
+      "flowVersion": "0.85" // Flow version
+    },
   }
 }
