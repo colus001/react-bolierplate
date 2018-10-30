@@ -1,8 +1,10 @@
 {
   "presets": [
-    "react-app"
+    "@babel/react",
+    "@babel/flow"
   ],
   "plugins": [
+    "@babel/proposal-object-rest-spread",
     ["module-resolver", {
       "root": [ "./src" ]
     }]
