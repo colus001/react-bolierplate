@@ -1,4 +1,5 @@
-import { createStore, applyMiddleware } from 'redux'
+// @flow
+import { compose, createStore, applyMiddleware } from 'redux'
 import { createEpicMiddleware } from 'redux-observable'
 
 // import rootEpic from 'state/epics'
