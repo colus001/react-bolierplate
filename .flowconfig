@@ -12,7 +12,7 @@ module.name_mapper='^src' -> '<PROJECT_ROOT>/src'
 module.name_mapper='^components' -> '<PROJECT_ROOT>/src/components'
 module.name_mapper='^containers' -> '<PROJECT_ROOT>/src/containers'
 module.name_mapper='^screens' -> '<PROJECT_ROOT>/src/screens'
-module.name_mapper='^constants' -> '<PROJECT_ROOT>/src/state'
+module.name_mapper='^constants' -> '<PROJECT_ROOT>/src/constants'
 module.name_mapper='^state' -> '<PROJECT_ROOT>/src/state'
 module.name_mapper='^styles' -> '<PROJECT_ROOT>/src/styles'
 
